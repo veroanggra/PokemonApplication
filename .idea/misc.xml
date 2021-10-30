@@ -5,7 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_pokeball.xml" value="0.15185185185185185" />
         <entry key="app/src/main/res/drawable/bottom_navigation_icon_color.xml" value="0.15185185185185185" />
+        <entry key="app/src/main/res/drawable/ic_pokeball.xml" value="0.14537037037037037" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
       </map>
     </option>
   </component>
