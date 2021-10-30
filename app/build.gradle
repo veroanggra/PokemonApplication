@@ -54,6 +54,7 @@ dependencies {
 
     //core
     implementation 'androidx.lifecycle:lifecycle-runtime:2.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //noinspection LifecycleAnnotationProcessorWithJava8
     kapt 'androidx.lifecycle:lifecycle-compiler:2.4.0'
     implementation 'androidx.work:work-runtime:2.7.0'
