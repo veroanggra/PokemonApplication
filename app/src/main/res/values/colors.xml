@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#ffffff</color>
+    <color name="primary_dark">#eeeeee</color>
+    <color name="accent">#1e88e5</color>
+    <color name="accent_dark">#1565c0</color>
+    <color name="accent_highlight">#FFE8CF</color>
+
+    <color name="logo_scheme_2">#374F5E</color>
+    <color name="logo_scheme_3">#AEB6C1</color>
+    <color name="logo_scheme_4">#1e88e5</color>
+    <color name="logo_scheme_6">#455259</color>
+
+    <color name="black_7">#77000000</color>
+    <color name="white_d">#ddffffff</color>
+    <color name="c_3">#333333</color>
+    <color name="black_3">#33000000</color>
+    <color name="orange">#FF923B</color>
+    <color name="c_7">#777777</color>
+
+    <color name="shimmer_base">#cccccc</color>
+
+    <color name="black_center">#52575D</color>
+    <color name="black_edge">#41444B</color>
+
+    <color name="blue_center">#1e88e5</color>
+    <color name="blue_edge">#1565c0</color>
+
+    <color name="brown_center">#bcaaa4</color>
+    <color name="brown_edge">#8d6e63</color>
+
+    <color name="gray_center">#78909c</color>
+    <color name="gray_edge">#546e7a</color>
+
+    <color name="green_center">#009688</color>
+    <color name="green_edge">#00796b</color>
+
+    <color name="green_light_center">#c8e6c9</color>
+    <color name="green_light_edge">#a5d6a7</color>
+
+    <color name="pink_center">#d81b60</color>
+    <color name="pink_edge">#ad1457</color>
+
+    <color name="purple_center">#8e24aa</color>
+    <color name="purple_edge">#6a1b9a</color>
+
+    <color name="red_center">#d32f2f</color>
+    <color name="red_edge">#b71c1c</color>
+
+    <color name="white_center">#ffffff</color>
+    <color name="white_edge">#ffffff</color>
+
+    <color name="yellow_center">#ffee58</color>
+    <color name="yellow_edge">#fdd835</color>
+</resources>
