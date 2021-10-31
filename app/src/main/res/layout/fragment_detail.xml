@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coorDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".DetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/tlDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_480dp"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="true">
+
+            <View
+                android:id="@+id/backgroundStickyDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_320dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/background_rounded_white"
+                app:layout_collapseMode="parallax" />
+
+            <ImageView
+                android:id="@+id/ivTopDetail"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="@dimen/_160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_50dp"
+                android:contentDescription="@string/txt_imageview"
+                android:scaleType="fitCenter"
+                app:layout_collapseMode="parallax" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNameDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_32sp"
+                    tools:text="Title" />
+
+                <LinearLayout
+                    android:id="@+id/tvTypeDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivFirstTypeDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_48dp"
+                        android:contentDescription="@string/txt_imageview"
+                        android:scaleType="fitCenter" />
+
+                    <ImageView
+                        android:id="@+id/ivSecondTypeDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_48dp"
+                        android:contentDescription="@string/txt_imageview"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvFlavorDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingTop="@dimen/_20dp"
+                    android:paddingEnd="@dimen/_10dp"
+                    android:paddingBottom="@dimen/_12dp"
+                    android:textColor="@android:color/black"
+                    tools:text="Title\nTitle\nTitle" />
+
+                <RadioGroup
+                    android:id="@+id/tabsMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_rounded_white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbStats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4dp"
+                        android:background="@drawable/background_switch"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="@dimen/_100dp"
+                        android:padding="@dimen/_10dp"
+                        android:text="@string/txt_stats"
+                        android:textAllCaps="true"
+                        android:textColor="@drawable/radio_button_color" />
+
+                    <RadioButton
+                        android:id="@+id/rbEvolution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4dp"
+                        android:background="@drawable/background_switch"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="@dimen/_100dp"
+                        android:padding="@dimen/_10dp"
+                        android:text="@string/txt_evolution"
+                        android:textAllCaps="true"
+                        android:textColor="@drawable/radio_button_color" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginBottom="@dimen/_80dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvTitleDetail"
+                        style="@style/MyToolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:alpha="0"
+                        android:textColor="@android:color/white"
+                        tools:text="Title" />
+
+                    <ImageView
+                        android:id="@+id/ivArrowDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:contentDescription="@string/txt_imageview"
+                        android:focusable="true"
+                        android:padding="@dimen/_12dp"
+                        android:src="@drawable/ic_baseline_keyboard_double_arrow_down_24"
+                        app:tint="@android:color/white" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_rounded_white"
+        android:fillViewport="true"
+        app:behavior_overlapTop="@dimen/_65dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_65dp" />
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/shimmerDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible">
+
+        <include layout="@layout/layout_detail_shimmer" />
+    </FrameLayout>
+    
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -6,14 +6,20 @@
         <entry key="app/src/main/res/drawable-v24/background_shimer.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_pokeball.xml" value="0.15185185185185185" />
         <entry key="app/src/main/res/drawable-v24/shimmer_circle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_edit_text.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/background_round.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/background_rounded_white.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/background_shimer.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_switch.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_switch_checked.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bottom_navigation_icon_color.xml" value="0.15185185185185185" />
+        <entry key="app/src/main/res/drawable/gradient_button_disabled.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_pokeball.xml" value="0.14537037037037037" />
         <entry key="app/src/main/res/drawable/shimmer_circle.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_pokemon.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_pokemon_shimer.xml" value="0.1" />

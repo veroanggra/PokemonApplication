@@ -6,4 +6,6 @@
     <string name="txt_name">Name</string>
     <string name="txt_id_pokemon">#001</string>
     <string name="txt_error">Sorry an Error Occurre</string>
+    <string name="txt_stats">Stats</string>
+    <string name="txt_evolution">Evolution</string>
 </resources>
