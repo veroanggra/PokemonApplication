@@ -70,23 +70,5 @@
         <item name="android:background">@drawable/background_button</item>
     </style>
 
-<!--    &lt;!&ndash;Checkbox&ndash;&gt;-->
-<!--    <style name="BaseCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">-->
-<!--        <item name="android:fontFamily">sans-serif-light</item>-->
-<!--    </style>-->
-
-<!--    <style name="MyCheckBox" parent="BaseCheckBox">-->
-<!--        <item name="android:textColor">@drawable/check_box_color</item>-->
-<!--    </style>-->
-
-
-<!--    &lt;!&ndash;Spinner&ndash;&gt;-->
-
-<!--    &lt;!&ndash;AlertDialog&ndash;&gt;-->
-<!--    <style name="MyAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">-->
-<!--        <item name="colorPrimary">@color/accent</item>-->
-<!--        <item name="colorPrimaryDark">@color/accent_dark</item>-->
-<!--        <item name="colorAccent">@color/accent</item>-->
-<!--    </style>-->
 
 </resources>

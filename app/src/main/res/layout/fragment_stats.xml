@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_12dp"
+    tools:context=".presentation.stats.StatsFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/title_weaknesses"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="normal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWeaknesses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/title_abilities"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="normal" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/abilities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/title_breeding"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/_20dp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llEgg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_egg_group"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:background="@color/black_3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_hatch_time"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/hatch_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:gravity="center"
+                tools:text="256 Steps" />
+
+            <TextView
+                android:id="@+id/hatch_cycles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:gravity="center"
+                tools:text="1 Cycles" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:background="@color/black_3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_gender"
+                android:textColor="@color/accent"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_28dp"
+                android:layout_height="@dimen/_28dp"
+                android:contentDescription="@string/txt_imageview"
+                android:src="@drawable/ic_male_female"
+                app:layout_constraintBottom_toBottomOf="@+id/progress_gender"
+                app:layout_constraintEnd_toEndOf="@+id/progress_gender"
+                app:layout_constraintStart_toStartOf="@+id/progress_gender"
+                app:layout_constraintTop_toTopOf="@+id/progress_gender" />
+
+            <ProgressBar
+                android:id="@+id/progress_gender"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                android:background="@drawable/circle_shape_pink"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="65"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+            <TextView
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:gravity="center"
+                android:textColor="@color/pink_center"
+                app:layout_constraintBottom_toTopOf="@+id/male"
+                app:layout_constraintEnd_toStartOf="@+id/progress_gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender"
+                tools:text="12.5%" />
+
+            <TextView
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:gravity="center"
+                android:textColor="@color/accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/progress_gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/female"
+                tools:text="87.5%" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/title_capture"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_habitat"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/habitat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:gravity="center"
+                tools:text="Water's Edge" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:background="@color/black_3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_generation"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/generation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:gravity="center"
+                tools:text="Generation I" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:background="@color/black_3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <ImageView
+                android:layout_width="@dimen/_18dp"
+                android:layout_height="@dimen/_18dp"
+                android:contentDescription="@string/txt_imageview"
+                android:src="@drawable/ic_center_focus_24"
+                app:layout_constraintBottom_toBottomOf="@+id/progress_capture"
+                app:layout_constraintEnd_toEndOf="@+id/progress_capture"
+                app:layout_constraintStart_toStartOf="@+id/progress_capture"
+                app:layout_constraintTop_toTopOf="@+id/progress_capture" />
+
+            <TextView
+                android:id="@+id/capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_capture_rate"
+                android:textColor="@color/accent"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progress_capture"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                android:layout_margin="@dimen/_4dp"
+                android:background="@drawable/circle_shape_gray"
+                android:indeterminate="false"
+                android:max="100"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/capture" />
+
+            <TextView
+                android:id="@+id/capture_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:gravity="center"
+                android:textColor="@color/accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/progress_capture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/capture"
+                tools:text="45%" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:gravity="center"
+        android:text="@string/title_sprites"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_normal"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/normal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120dp"
+                android:layout_margin="@dimen/_4dp"
+                android:contentDescription="@string/txt_imageview"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_48dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/black_3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6dp"
+                android:gravity="center"
+                android:text="@string/title_shiny"
+                android:textColor="@color/accent"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/shiny"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120dp"
+                android:layout_margin="@dimen/_4dp"
+                android:contentDescription="@string/txt_imageview"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/_12dp"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivTypeStartEvolution"
+            android:layout_width="@dimen/_80dp"
+            android:layout_height="@dimen/_80dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/txt_imageview"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tvTypeStartEvolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4dp"
+            tools:text="1/4 x" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginEnd="@dimen/_12dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/specs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/accent"
+            tools:text="Lv 16" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/txt_imageview"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_long_arrow_right_80"
+            app:tint="@color/black_7" />
+
+        <TextView
+            android:id="@+id/tvTriggerEvolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_16sp"
+            tools:text="Lv 16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivTypeFinalEvolution"
+            android:layout_width="@dimen/_80dp"
+            android:layout_height="@dimen/_80dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/txt_imageview"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tvTypeFinalEvolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4dp"
+            tools:text="1/4 x" />
+    </LinearLayout>
+</LinearLayout>

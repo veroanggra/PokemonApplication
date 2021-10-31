@@ -8,4 +8,18 @@
     <string name="txt_error">Sorry an Error Occurre</string>
     <string name="txt_stats">Stats</string>
     <string name="txt_evolution">Evolution</string>
+    <string name="txt_pokemon">Pokemon</string>
+    <string name="title_weaknesses">Weaknesses</string>
+    <string name="title_abilities">Abilities</string>
+    <string name="title_breeding">Breeding</string>
+    <string name="title_egg_group">Egg Group</string>
+    <string name="title_hatch_time">Hatch Time</string>
+    <string name="title_gender">Gender</string>
+    <string name="title_capture">Capture</string>
+    <string name="title_habitat">Habitat</string>
+    <string name="title_generation">Generation</string>
+    <string name="title_capture_rate">Capture Rate</string>
+    <string name="title_sprites">Sprites</string>
+    <string name="title_normal">Normal</string>
+    <string name="title_shiny">Shiny</string>
 </resources>
