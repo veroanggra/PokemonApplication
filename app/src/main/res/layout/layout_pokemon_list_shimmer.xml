@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:shimmer_duration="600"
+    app:shimmer_repeat_mode="reverse">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shimmer_base" />
+
+        <include layout="@layout/item_pokemon_shimer" />
+    </LinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

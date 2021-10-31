@@ -10,4 +10,5 @@
     <dimen name="_20dp">20dp</dimen>
     <dimen name="_6dp">6dp</dimen>
     <dimen name="_30dp">30dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
 </resources>
