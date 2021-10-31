@@ -104,7 +104,6 @@ class PokemonDetailResponseMapper @Inject internal constructor(private val conve
     ): ArrayList<Weakness> {
         val result: ArrayList<Weakness> = arrayListOf()
 
-        // put all types with 1x damage multiplier
         allTypes.results?.mapIndexed { i, t ->
             val type = generateType(t.name.orEmpty())
             if (type.typeRes > 0) {
@@ -112,7 +111,6 @@ class PokemonDetailResponseMapper @Inject internal constructor(private val conve
             }
         }
 
-        // multiply with each damage multiplier
         typeDamages.map { response ->
             response.damageRelations?.doubleDamageFrom?.map { doubleType ->
                 result.filter { it.type.name == doubleType.name }.map {
@@ -250,6 +248,5 @@ class PokemonDetailResponseMapper @Inject internal constructor(private val conve
         df.roundingMode = RoundingMode.CEILING
         return df.format(number).toDouble()
     }
-
 
 }

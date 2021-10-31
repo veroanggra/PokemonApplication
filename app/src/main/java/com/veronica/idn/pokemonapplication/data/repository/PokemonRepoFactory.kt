@@ -23,7 +23,6 @@ class PokemonRepoFactory @Inject constructor(
         return if (remoteDataSourceEmpty()) {
             Single.error(IllegalArgumentException())
         } else {
-            // TODO get from DB first, build own pagination mapping
             remoteData!!.getPokemonList()
         }
     }

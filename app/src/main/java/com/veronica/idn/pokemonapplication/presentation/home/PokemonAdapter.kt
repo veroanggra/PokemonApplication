@@ -50,10 +50,10 @@ class PokemonAdapter(
 
             binding.llContainerItemPokemon.removeAllViews()
             item.types.forEachIndexed { i, type ->
-                val iv = ImageView(ctx)
-                iv.layoutParams = LayoutParams(72, 72)
-                iv.setImageResource(type.typeRes)
-                binding.llContainerItemPokemon.addView(iv, i)
+                val ivContainer = ImageView(ctx)
+                ivContainer.layoutParams = LayoutParams(72, 72)
+                ivContainer.setImageResource(type.typeRes)
+                binding.llContainerItemPokemon.addView(ivContainer, i)
             }
         }
 
