@@ -7,21 +7,30 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    def conf = rootProject.configs
+    compileSdkVersion conf.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.veronica.idn.pokemonapplication"
-        minSdk 21
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion conf.minSdkVersion
+        targetSdkVersion conf.targetSdkVersion
+
+        applicationId conf.appId
+        versionCode conf.versionCode
+        versionName conf.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
-        release {
+        debug {
+            manifestPlaceholders = [enableCrashReporting: "false"]
             minifyEnabled false
+        }
+        release {
+            manifestPlaceholders = [enableCrashReporting: "true"]
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -35,6 +44,59 @@ android {
     buildFeatures {
         viewBinding true
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+    flavorDimensions "environment", "tier"
+    productFlavors {
+        dev {
+            dimension "environment"
+            applicationIdSuffix ".dev"
+            versionName "${defaultConfig.versionName}-${productFlavors[0].name}"
+            buildConfigField("String", "BASE_URL", baseUrlDev)
+        }
+
+        prod {
+            dimension "environment"
+            buildConfigField("String", "BASE_URL", baseUrlDev)
+        }
+
+        demo {
+            dimension "tier"
+            applicationIdSuffix ".demo"
+            buildConfigField("Boolean", "SHOW_LOG", "true")
+        }
+
+        full {
+            dimension "tier"
+            buildConfigField("Boolean", "SHOW_LOG", "false")
+        }
+    }
+
+    applicationVariants.all { variant ->
+        def versionName = "$variant.versionName"
+        def versionCode = "$variant.versionCode"
+
+        if ("$variant.flavorName".contains("Demo")) {
+            versionName = "$variant.versionName-demo"
+        }
+
+        variant.outputs.each { output ->
+            output.setVersionNameOverride(versionName)
+
+            def apkFileName = "PokeApp-${versionName}-${variant.buildType.name}-${versionCode}-${getDate()}.apk"
+            output.outputFileName = new File(apkFileName)
+        }
+    }
+
 }
 
 dependencies {
@@ -59,11 +121,20 @@ dependencies {
     kapt 'androidx.lifecycle:lifecycle-compiler:2.4.0'
     implementation 'androidx.work:work-runtime:2.7.0'
     implementation 'androidx.work:work-rxjava2:2.7.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //room
     implementation 'androidx.room:room-runtime:2.3.0'
     implementation 'androidx.room:room-rxjava2:2.3.0'
     kapt 'androidx.room:room-compiler:2.3.0'
+    kapt 'com.google.dagger:dagger-android-processor:2.38'
+
+    //dagger
+    implementation 'com.google.dagger:dagger:2.39.1'
+    implementation 'com.google.dagger:dagger-android-support:2.38'
+    kapt 'com.google.dagger:dagger-compiler:2.39.1'
+
 
     //navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
@@ -76,32 +147,20 @@ dependencies {
     //glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
-    
+
     //ui
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation 'com.github.shuhart:stickyheader:1.1.0'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //log
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
     //testing
     testImplementation 'junit:junit:'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+static def getDate() {
+    return new Date().format('yyyyMMddHHmm')
 }

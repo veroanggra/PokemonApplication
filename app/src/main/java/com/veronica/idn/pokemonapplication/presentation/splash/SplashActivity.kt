@@ -4,8 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.veronica.idn.pokemonapplication.MainActivity
-import com.veronica.idn.pokemonapplication.R
+import com.veronica.idn.pokemonapplication.presentation.main.MainActivity
 import com.veronica.idn.pokemonapplication.databinding.ActivitySplashBinding
 
 @SuppressLint("CustomSplashScreen")

@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/drawable/gradient_button_disabled.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_pokeball.xml" value="0.14537037037037037" />
         <entry key="app/src/main/res/drawable/shimmer_circle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shimmer_rounded_rectangle.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.1" />

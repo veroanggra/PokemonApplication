@@ -1,0 +1,10 @@
+ext {
+    configs = [
+            compileSdkVersion: 31,
+            minSdkVersion    : 21,
+            targetSdkVersion : 31,
+            appId            : "com.veronica.idn.pokemonapplication",
+            versionName      : 'git describe --tags --abbrev=0'.execute().text.trim(),
+            versionCode      : Integer.parseInt('git rev-list --count HEAD'.execute().text.trim() ?: "1"),
+    ]
+}

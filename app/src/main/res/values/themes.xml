@@ -11,20 +11,11 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <!--    <style name="AppTheme" parent="BaseTheme">-->
-<!--        <item name="toolbarStyle">@style/MyToolbar</item>-->
-<!--        <item name="actionOverflowButtonStyle">@style/MyMenuOverFlow</item>-->
-<!--        <item name="android:textViewStyle">@style/MyTextView</item>-->
-<!--        <item name="editTextStyle">@style/MyEditText</item>-->
-<!--        <item name="buttonStyle">@style/MyButton</item>-->
-<!--        <item name="alertDialogTheme">@style/MyAlertDialogTheme</item>-->
-<!--        <item name="android:alertDialogTheme">@style/MyAlertDialogTheme</item>-->
-<!--        <item name="checkboxStyle">@style/MyCheckBox</item>-->
-<!--    </style>-->
-<!--     <style name="AppTheme.NoActionBar">-->
-<!--        <item name="windowActionBar">false</item>-->
-<!--        <item name="windowNoTitle">true</item>-->
-<!--    </style>-->
+
+     <style name="NoTop" parent="Theme.PokemonApplication">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
 
 <!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->

@@ -5,7 +5,7 @@
     android:id="@+id/clHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".presentation.home.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHome"
@@ -36,6 +36,7 @@
         android:layout_width="@dimen/_100dp"
         android:layout_height="@dimen/_100dp"
         android:orientation="vertical"
+        android:gravity="center"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
