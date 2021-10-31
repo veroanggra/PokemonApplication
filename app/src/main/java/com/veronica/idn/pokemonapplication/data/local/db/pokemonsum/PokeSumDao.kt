@@ -1,4 +1,4 @@
-package com.veronica.idn.pokemonapplication.data.local.db.pokemondetail
+package com.veronica.idn.pokemonapplication.data.local.db.pokemonsum
 
 import androidx.room.Dao
 import androidx.room.Query

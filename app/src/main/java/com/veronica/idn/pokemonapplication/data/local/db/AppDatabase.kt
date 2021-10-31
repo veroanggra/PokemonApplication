@@ -9,9 +9,9 @@ import com.veronica.idn.pokemonapplication.data.local.db.evolution.EvolutionDao
 import com.veronica.idn.pokemonapplication.data.local.db.evolution.EvolutionEntity
 import com.veronica.idn.pokemonapplication.data.local.db.pokemon.PokemonDao
 import com.veronica.idn.pokemonapplication.data.local.db.pokemon.PokemonEntity
-import com.veronica.idn.pokemonapplication.data.local.db.pokemondetail.PokeSumDao
 import com.veronica.idn.pokemonapplication.data.local.db.pokemondetail.PokemonDetailDao
 import com.veronica.idn.pokemonapplication.data.local.db.pokemondetail.PokemonDetailEntity
+import com.veronica.idn.pokemonapplication.data.local.db.pokemonsum.PokeSumDao
 import com.veronica.idn.pokemonapplication.data.local.db.pokemonsum.PokeSumEntity
 import com.veronica.idn.pokemonapplication.data.local.db.stat.StatDao
 import com.veronica.idn.pokemonapplication.data.local.db.stat.StatEntity

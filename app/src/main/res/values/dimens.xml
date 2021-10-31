@@ -31,4 +31,5 @@
     <dimen name="_1dp">1dp</dimen>
     <dimen name="_28dp">28dp</dimen>
     <dimen name="_18dp">18dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
 </resources>

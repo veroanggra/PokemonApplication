@@ -1,60 +1,98 @@
 package com.veronica.idn.pokemonapplication.presentation.stats
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.veronica.idn.pokemonapplication.R
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.veronica.idn.pokemonapplication.databinding.FragmentStatsBinding
+import com.veronica.idn.pokemonapplication.domain.entity.PokemonDetail
+import com.veronica.idn.pokemonapplication.presentation.adapter.AbilityAdapter
+import com.veronica.idn.pokemonapplication.presentation.adapter.WeaknessAdapter
+import com.veronica.idn.pokemonapplication.presentation.base.BaseFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class StatsFragment : BaseFragment<FragmentStatsBinding>() {
+    private lateinit var detail: PokemonDetail
 
-/**
- * A simple [Fragment] subclass.
- * Use the [StatsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class StatsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    override fun onPresenterAttached() {
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        arguments?.let { detail = it.getParcelable(parcelPokemon)!! }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stats, container, false)
+    override fun showMainProgressBar(show: Boolean) {
+    }
+
+    override fun showError(message: String?) {
+    }
+
+
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentStatsBinding
+        get() = FragmentStatsBinding::inflate
+
+    override fun setupPresenter() {
+        val statsAdapter = StatsAdapter(detail.stats.toMutableList())
+        binding.rvStats.adapter = statsAdapter
+
+        val weaknessAdapter = WeaknessAdapter(detail.weaknesses.toMutableList())
+        val lm = GridLayoutManager(requireContext(), 3)
+        binding.rvWeaknesses.layoutManager = lm
+        binding.rvWeaknesses.adapter = weaknessAdapter
+
+        val abilityAdapter = AbilityAdapter(detail.abilities.toMutableList())
+        binding.abilities.adapter = abilityAdapter
+
+
+        detail.eggGroups.map {
+            val param = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            param.setMargins(4, 4, 4, 4)
+            val tv = TextView(requireContext())
+            tv.layoutParams = param
+            tv.text = it
+            binding.llEgg.addView(tv)
+        }
+
+        "${detail.hatchSteps} Steps".also { binding.hatchSteps.text = it }
+        "${detail.hatchCycles} Cycles".also { binding.hatchCycles.text = it }
+
+        "${detail.hatchSteps} Steps".also { binding.hatchSteps.text = it }
+        "${detail.hatchCycles} Cycles".also { binding.hatchCycles.text = it }
+
+        "${detail.femalePercent}%".also { binding.female.text = it }
+        "${detail.malePercent}%".also { binding.male.text = it }
+
+        binding.habitat.text = detail.habitat
+        binding.generation.text = detail.generation
+
+        "${detail.captureRate}%".also { binding.captureRate.text = it }
+        binding.progressCapture.progress = detail.captureRate
+
+        Glide.with(this)
+            .load(detail.sprite)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(binding.normal)
+
+        Glide.with(this)
+            .load(detail.spriteShiny)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(binding.shiny)
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment StatsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+        const val parcelPokemon = "parcelPokemon"
+
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(pokemonDetail: PokemonDetail) =
             StatsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+                arguments = Bundle().apply { putParcelable(parcelPokemon, pokemonDetail) }
             }
     }
 }

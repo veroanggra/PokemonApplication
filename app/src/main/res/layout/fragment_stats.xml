@@ -59,7 +59,7 @@
         android:gravity="center"
         android:text="@string/title_breeding"
         android:textColor="@color/accent"
-        android:textSize="@dimen/_20dp"
+        android:textSize="@dimen/_20sp"
         android:textStyle="normal" />
 
     <LinearLayout
@@ -432,7 +432,5 @@
 
         </LinearLayout>
     </LinearLayout>
-
-
 
 </LinearLayout>

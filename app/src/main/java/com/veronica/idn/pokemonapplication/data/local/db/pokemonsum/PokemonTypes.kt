@@ -1,4 +1,4 @@
-package com.etomun.mobile.pokeapp.data.local.database.pokemonsum
+package com.veronica.idn.pokemonapplication.data.local.db.pokemonsum
 
 import androidx.room.Embedded
 import androidx.room.Junction
