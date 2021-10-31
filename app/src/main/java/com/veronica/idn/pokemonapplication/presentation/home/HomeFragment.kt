@@ -48,7 +48,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeInterface.View {
 
     override fun showError(message: String?) {
         Timber.e(message)
-        print(message)
         binding.llHomeError.visibility = if (message=="Failed") View.VISIBLE else View.GONE
     }
 

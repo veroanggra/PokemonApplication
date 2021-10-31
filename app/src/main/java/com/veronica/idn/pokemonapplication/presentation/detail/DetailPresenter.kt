@@ -24,7 +24,7 @@ class DetailPresenter<V : DetailInterface.View>
             .subscribe({
                 view.showDetail(it)
             }, {
-                view.showError(it.toString())
+                view.showError("Failed")
             })
         )
     }

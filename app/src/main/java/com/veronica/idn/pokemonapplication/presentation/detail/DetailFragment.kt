@@ -106,6 +106,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(), DetailInterface.Vi
 
     override fun showError(message: String?) {
         Timber.e(message)
+        binding.llDetailError.visibility = if (message=="Failed") View.VISIBLE else View.GONE
     }
 
 }
