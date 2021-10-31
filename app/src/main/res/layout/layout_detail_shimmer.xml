@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="@dimen/_160dp"
+            android:layout_height="@dimen/_160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50dp"
+            android:background="@drawable/background_shimer" />
+
+        <View
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_4dp"
+            android:background="@drawable/background_shimer" />
+
+        <View
+            android:layout_width="@dimen/_80dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/background_shimer" />
+
+        <View
+            android:layout_width="@dimen/_300dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_shimer" />
+
+        <View
+            android:layout_width="@dimen/_280dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:background="@drawable/background_shimer" />
+
+        <View
+            android:layout_width="@dimen/_300dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:background="@drawable/background_shimer" />
+
+        <LinearLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_rounded_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_20dp">
+
+            <View
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:background="@drawable/background_shimer" />
+
+            <View
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/background_shimer" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_360dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_shimer" />
+
+        <View
+            android:layout_width="@dimen/_360dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_round" />
+
+        <View
+            android:layout_width="@dimen/_360dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_round" />
+
+        <View
+            android:layout_width="@dimen/_360dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_round" />
+
+        <View
+            android:layout_width="@dimen/_360dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/background_round" />
+
+    </LinearLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>
